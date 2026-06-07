@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="stellion-title stellion-desc">
+  <title id="stellion-title">The Stellion Universe - Platform Architecture</title>
+  <desc id="stellion-desc">Constellation diagram showing Core at the gravitational center, Orion, Cosmos, and Atlas as connected stars, and Horizon as the observation layer.</desc>
+
+  <defs>
+    <radialGradient id="spaceBg" cx="50%" cy="42%" r="75%">
+      <stop offset="0%" stop-color="#0d1b2a"/>
+      <stop offset="45%" stop-color="#0a0f1e"/>
+      <stop offset="100%" stop-color="#030508"/>
+    </radialGradient>
+
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6ec6ff" stop-opacity="0.55"/>
+      <stop offset="55%" stop-color="#3d7cff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#3d7cff" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="starGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="35%" stop-color="#a8d4ff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#a8d4ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="horizonArc" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7b9cff" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#9bb4ff" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#c4d4ff" stop-opacity="0.85"/>
+      <stop offset="80%" stop-color="#9bb4ff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#7b9cff" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="linkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a6fa5" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#8eb4ff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#4a6fa5" stop-opacity="0.15"/>
+    </linearGradient>
+
+    <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+
+    <filter id="textShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.65"/>
+    </filter>
+
+    <style>
+      .label-title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 15px; font-weight: 600; fill: #eef4ff; letter-spacing: 0.04em; }
+      .label-role  { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 11px; fill: #8fa8cc; letter-spacing: 0.08em; text-transform: uppercase; }
+      .label-desc  { font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Segoe UI', sans-serif; font-size: 10.5px; fill: #6d8ab0; }
+      .header      { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 22px; font-weight: 300; fill: #dce8ff; letter-spacing: 0.18em; text-transform: uppercase; }
+      .subheader   { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 12px; fill: #7a94b8; letter-spacing: 0.12em; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="680" fill="url(#spaceBg)"/>
+
+  <!-- Distant stars -->
+  <g opacity="0.55">
+    <circle cx="98"  cy="112" r="1.2" fill="#fff"/>
+    <circle cx="245" cy="78"  r="0.9" fill="#fff"/>
+    <circle cx="412" cy="54"  r="1.1" fill="#fff"/>
+    <circle cx="688" cy="92"  r="0.8" fill="#fff"/>
+    <circle cx="891" cy="68"  r="1.3" fill="#fff"/>
+    <circle cx="1054" cy="134" r="0.9" fill="#fff"/>
+    <circle cx="1108" cy="512" r="0.9" fill="#fff"/>
+    <circle cx="62"  cy="498" r="1.0" fill="#fff"/>
+    <circle cx="178" cy="312" r="0.7" fill="#fff"/>
+    <circle cx="1044" cy="356" r="0.8" fill="#fff"/>
+    <circle cx="156" cy="620" r="1.0" fill="#fff"/>
+    <circle cx="1042" cy="610" r="0.9" fill="#fff"/>
+  </g>
+
+  <!-- Header -->
+  <text x="600" y="52" text-anchor="middle" class="header" filter="url(#textShadow)">The Stellion Universe</text>
+  <text x="600" y="76" text-anchor="middle" class="subheader">A living constellation of manufacturing capabilities</text>
+
+  <!-- Horizon arc - observation layer -->
+  <path d="M 120 200 Q 600 125 1080 200" fill="none" stroke="url(#horizonArc)" stroke-width="2.5" opacity="0.9"/>
+  <path d="M 160 200 Q 600 150 1040 200" fill="none" stroke="#c4d4ff" stroke-width="0.8" opacity="0.25"/>
+
+  <!-- Constellation connection lines -->
+  <g stroke="url(#linkGrad)" stroke-width="1.4" fill="none" opacity="0.7">
+    <!-- Core to domain stars -->
+    <line x1="600" y1="530" x2="270" y2="365"/>
+    <line x1="600" y1="530" x2="930" y2="365"/>
+    <line x1="600" y1="530" x2="600" y2="300"/>
+
+    <!-- Inter-domain links -->
+    <line x1="270" y1="365" x2="600" y2="300"/>
+    <line x1="930" y1="365" x2="600" y2="300"/>
+    <line x1="270" y1="365" x2="930" y2="365"/>
+
+    <!-- Horizon to all -->
+    <line x1="600" y1="195" x2="270" y2="365" stroke-opacity="0.35"/>
+    <line x1="600" y1="195" x2="930" y2="365" stroke-opacity="0.35"/>
+    <line x1="600" y1="195" x2="600" y2="300" stroke-opacity="0.35"/>
+    <line x1="600" y1="195" x2="600" y2="530" stroke-opacity="0.45"/>
+  </g>
+
+  <!-- Orbital rings -->
+  <ellipse cx="600" cy="530" rx="300" ry="185" fill="none" stroke="#2a4068" stroke-width="0.8" stroke-dasharray="4 8" opacity="0.45"/>
+  <ellipse cx="600" cy="530" rx="200" ry="125" fill="none" stroke="#2a4068" stroke-width="0.6" stroke-dasharray="3 7" opacity="0.35"/>
+
+  <!-- HORIZON -->
+  <g transform="translate(600, 195)">
+    <circle r="38" fill="url(#starGlow)" opacity="0.55" filter="url(#softBlur)"/>
+    <circle r="14" fill="#dce8ff"/>
+    <circle r="6"  fill="#ffffff"/>
+    <text y="-54" text-anchor="middle" class="label-title" filter="url(#textShadow)">stellion-horizon</text>
+    <text y="-38" text-anchor="middle" class="label-role">Experience</text>
+    <text y="70"  text-anchor="middle" class="label-desc">운영자가 우주를 관찰하는 창</text>
+  </g>
+
+  <!-- ATLAS (left) -->
+  <g transform="translate(270, 365)">
+    <circle r="34" fill="url(#starGlow)" opacity="0.5" filter="url(#softBlur)"/>
+    <circle r="12" fill="#b8d0ff"/>
+    <circle r="5"  fill="#ffffff"/>
+    <text x="-175" y="-6" text-anchor="start" class="label-title" filter="url(#textShadow)">stellion-atlas</text>
+    <text x="-175" y="10" text-anchor="start" class="label-role">Knowledge Map</text>
+    <text x="-175" y="28" text-anchor="start" class="label-desc">문서화와 탐색</text>
+  </g>
+
+  <!-- COSMOS (top) -->
+  <g transform="translate(600, 300)">
+    <circle r="34" fill="url(#starGlow)" opacity="0.5" filter="url(#softBlur)"/>
+    <circle r="12" fill="#b8d0ff"/>
+    <circle r="5"  fill="#ffffff"/>
+    <text y="-68" text-anchor="middle" class="label-title" filter="url(#textShadow)">stellion-cosmos</text>
+    <text y="-52" text-anchor="middle" class="label-role">Data Universe</text>
+    <text y="58"  text-anchor="middle" class="label-desc">메타데이터, 계보, 거버넌스</text>
+  </g>
+
+  <!-- ORION (right) -->
+  <g transform="translate(930, 365)">
+    <circle r="34" fill="url(#starGlow)" opacity="0.5" filter="url(#softBlur)"/>
+    <circle r="12" fill="#b8d0ff"/>
+    <circle r="5"  fill="#ffffff"/>
+    <text x="175" y="-6" text-anchor="end" class="label-title" filter="url(#textShadow)">stellion-orion</text>
+    <text x="175" y="10" text-anchor="end" class="label-role">Manufacturing</text>
+    <text x="175" y="28" text-anchor="end" class="label-desc">운영이 실체화되는 곳</text>
+  </g>
+
+  <!-- CORE (center) -->
+  <g transform="translate(600, 530)">
+    <circle r="72" fill="url(#coreGlow)" filter="url(#softBlur)"/>
+    <circle r="28" fill="#3d7cff" opacity="0.25"/>
+    <circle r="18" fill="#5a9fff"/>
+    <circle r="8"  fill="#ffffff"/>
+    <text y="-98" text-anchor="middle" class="label-title" filter="url(#textShadow)">stellion-core</text>
+    <text y="-82" text-anchor="middle" class="label-role">Foundation</text>
+    <text y="62"  text-anchor="middle" class="label-desc">중력의 중심 - 인증, API, 런타임</text>
+  </g>
+</svg>
